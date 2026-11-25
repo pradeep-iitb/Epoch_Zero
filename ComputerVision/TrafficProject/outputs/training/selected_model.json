@@ -1,0 +1,15 @@
+{
+  "base_model": "yolo26s.pt",
+  "weights": "weights/yolo26s_traffic_best.pt",
+  "init": "stage 1 = selection run (8 epochs on 50% of train, from COCO weights); stage 2 = this run on all training images",
+  "smoke_test": false,
+  "epochs_max": 10,
+  "imgsz": 960,
+  "batch": 4,
+  "train_minutes": 23.4,
+  "peak_vram_gb": 3.1,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "train_images": 2241,
+  "val_images": 480
+}

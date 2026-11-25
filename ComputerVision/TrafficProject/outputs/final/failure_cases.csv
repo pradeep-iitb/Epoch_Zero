@@ -1,0 +1,7 @@
+#,image,source,GT,pred,error,missed (FN),false pos.,"matched, wrong class",median GT box (% of image),GT boxes < 32x32 px,mean brightness (0-255),GT classes
+1,uvh26__192515.jpg,UVH-26,2,17,15,2,17,0,0.401,0,122.6,"{'car': 1, 'auto_rickshaw': 1}"
+2,uvh26__270002.jpg,UVH-26,3,13,10,2,12,0,0.33,0,134.2,{'two_wheeler': 3}
+3,uvh26__506626.jpg,UVH-26,29,36,7,1,8,3,1.769,0,122.1,"{'car': 2, 'two_wheeler': 18, 'auto_rickshaw': 8, 'truck': 1}"
+4,uvh26__977075.jpg,UVH-26,23,16,-7,8,1,0,0.723,0,142.1,"{'car': 13, 'two_wheeler': 6, 'auto_rickshaw': 2, 'truck': 2}"
+5,uvh26__12099.jpg,UVH-26,21,15,-6,6,0,0,0.449,0,129.3,"{'car': 2, 'two_wheeler': 14, 'auto_rickshaw': 2, 'truck': 3}"
+6,uvh26__383558.jpg,UVH-26,12,18,6,0,6,1,5.311,0,130.7,"{'car': 1, 'two_wheeler': 6, 'auto_rickshaw': 2, 'bus': 1, 'truck': 2}"

@@ -1,0 +1,202 @@
+{
+  "smoke_test": false,
+  "n_test_images": 300,
+  "n_test_vehicles": 4027,
+  "n_own_test_images": 0,
+  "tuned": {
+    "smoke_test": false,
+    "yolo_weights": "weights/yolo26s_traffic_best.pt",
+    "yolo_imgsz": 960,
+    "yolo_conf": 0.275,
+    "gdino_model": "IDEA-Research/grounding-dino-tiny",
+    "gdino_prompts": {
+      "car": [
+        "car"
+      ],
+      "two_wheeler": [
+        "motorcycle",
+        "scooter",
+        "bicycle"
+      ],
+      "auto_rickshaw": [
+        "auto rickshaw"
+      ],
+      "bus": [
+        "bus"
+      ],
+      "truck": [
+        "truck"
+      ]
+    },
+    "gdino_conf": 0.325,
+    "classical_params": {
+      "work_width": 960,
+      "canny_low": 30,
+      "canny_high": 150,
+      "kernel": 3,
+      "dilate_iter": 1,
+      "min_area": 0.0005,
+      "max_area": 0.15,
+      "min_aspect": 0.25,
+      "max_aspect": 4.0,
+      "min_fill": 0.3
+    },
+    "pcu_weights": {
+      "car": 1.0,
+      "two_wheeler": 0.5,
+      "auto_rickshaw": 1.2,
+      "bus": 2.2,
+      "truck": 2.2
+    },
+    "agnostic_pcu": 1.0,
+    "alpha": 0.5,
+    "pcu_sat": 24.685,
+    "occ_sat": 0.5343,
+    "thresholds": {
+      "gt": [
+        0.3063,
+        0.5103
+      ],
+      "yolo": [
+        0.3063,
+        0.5103
+      ],
+      "gdino": [
+        0.3063,
+        0.5103
+      ],
+      "classical": [
+        0.3063,
+        0.5103
+      ]
+    },
+    "threshold_source": "tertiles of the validation ground-truth score (no manual validation labels)",
+    "n_val_images_used": 250
+  },
+  "results": {
+    "Classical OpenCV": {
+      "det_classes": null,
+      "det_agnostic": {
+        "mAP50": 0.003033647033038335,
+        "mAP50_95": 0.0021318302353904714,
+        "precision": 0.03985828166519043,
+        "recall": 0.022349143282840826,
+        "AP50_per_class": {
+          "vehicle": 0.003033647033038335
+        },
+        "n_gt": 4027
+      },
+      "count": {
+        "n_images": 300,
+        "count_MAE": 8.25,
+        "count_bias": -5.8966666666666665,
+        "count_RMSE": 11.15242873398735,
+        "mean_pct_error": 71.50092265799626,
+        "n_images_pct": 300,
+        "per_class_MAE": null,
+        "distribution_L1": null
+      },
+      "score_MAE": 0.3272966666666666,
+      "level_agree_gt": 0.25666666666666665,
+      "manual_n": 0,
+      "manual_acc": null,
+      "sec_per_img": 0.023445793787638346
+    },
+    "Grounding DINO zero-shot": {
+      "det_classes": {
+        "mAP50": 0.519351171526106,
+        "mAP50_95": 0.34901796186299816,
+        "precision": 0.631333881128458,
+        "recall": 0.5723863918549789,
+        "AP50_per_class": {
+          "car": 0.720548982669378,
+          "two_wheeler": 0.682904646532445,
+          "auto_rickshaw": 0.11250544922713938,
+          "bus": 0.6553582762446319,
+          "truck": 0.42543850295693586
+        },
+        "n_gt": 4027
+      },
+      "det_agnostic": {
+        "mAP50": 0.7255171786567224,
+        "mAP50_95": 0.39361763168007013,
+        "precision": 0.7345932621199671,
+        "recall": 0.6660044698286566,
+        "AP50_per_class": {
+          "vehicle": 0.7255171786567224
+        },
+        "n_gt": 4027
+      },
+      "count": {
+        "n_images": 300,
+        "count_MAE": 3.2066666666666666,
+        "count_bias": -1.2533333333333334,
+        "count_RMSE": 4.559970760140171,
+        "mean_pct_error": 28.408290498346457,
+        "n_images_pct": 300,
+        "per_class_MAE": {
+          "car": 1.2166666666666666,
+          "two_wheeler": 1.7066666666666668,
+          "auto_rickshaw": 1.74,
+          "bus": 0.44666666666666666,
+          "truck": 0.8833333333333333
+        },
+        "distribution_L1": 0.4380476915790229,
+        "n_images_L1": 299
+      },
+      "score_MAE": 0.09054633333333333,
+      "level_agree_gt": 0.7333333333333333,
+      "manual_n": 0,
+      "manual_acc": null,
+      "sec_per_img": 0.5910202344258626
+    },
+    "YOLO26s fine-tuned": {
+      "det_classes": {
+        "mAP50": 0.8245167056986767,
+        "mAP50_95": 0.6902552908935231,
+        "precision": 0.8350409836065574,
+        "recall": 0.8095356344673454,
+        "AP50_per_class": {
+          "car": 0.8014344071337878,
+          "two_wheeler": 0.9099894578450907,
+          "auto_rickshaw": 0.9099241813368248,
+          "bus": 0.7924946328976564,
+          "truck": 0.7087408492800236
+        },
+        "n_gt": 4027
+      },
+      "det_agnostic": {
+        "mAP50": 0.890019753187163,
+        "mAP50_95": 0.7286644159586204,
+        "precision": 0.8578381147540983,
+        "recall": 0.8316364539359324,
+        "AP50_per_class": {
+          "vehicle": 0.890019753187163
+        },
+        "n_gt": 4027
+      },
+      "count": {
+        "n_images": 300,
+        "count_MAE": 1.81,
+        "count_bias": -0.41,
+        "count_RMSE": 2.5199206336708304,
+        "mean_pct_error": 18.801016677742012,
+        "n_images_pct": 300,
+        "per_class_MAE": {
+          "car": 0.7466666666666667,
+          "two_wheeler": 1.0366666666666666,
+          "auto_rickshaw": 0.3933333333333333,
+          "bus": 0.21,
+          "truck": 0.65
+        },
+        "distribution_L1": 0.23709671080788167,
+        "n_images_L1": 299
+      },
+      "score_MAE": 0.06078633333333334,
+      "level_agree_gt": 0.8166666666666667,
+      "manual_n": 0,
+      "manual_acc": null,
+      "sec_per_img": 0.04371426264444987
+    }
+  }
+}

@@ -1,0 +1,20 @@
+"test set: 300 images, 4027 vehicles",Classical OpenCV,Grounding DINO zero-shot,YOLO26s fine-tuned
+mAP@0.5 (5 classes),n/a,0.519,0.825
+mAP@0.5:0.95 (5 classes),n/a,0.349,0.690
+mAP@0.5 (class-agnostic),0.003,0.726,0.890
+mAP@0.5:0.95 (class-agnostic),0.002,0.394,0.729
+"Precision (vehicle, IoU 0.5)",0.040,0.735,0.858
+"Recall (vehicle, IoU 0.5)",0.022,0.666,0.832
+Count MAE (vehicles / image),8.25,3.21,1.81
+Count bias (vehicles / image),-5.90,-1.25,-0.41
+Count RMSE (vehicles / image),11.15,4.56,2.52
+Mean % count error per image,71.5 %,28.4 %,18.8 %
+MAE car (vehicles / image),n/a,1.22,0.75
+MAE two_wheeler (vehicles / image),n/a,1.71,1.04
+MAE auto_rickshaw (vehicles / image),n/a,1.74,0.39
+MAE bus (vehicles / image),n/a,0.45,0.21
+MAE truck (vehicles / image),n/a,0.88,0.65
+Type-distribution L1 error (0-2),n/a,0.438,0.237
+Congestion score MAE vs GT boxes (0-1),0.327,0.091,0.061
+Level agreement with GT-box level,0.257,0.733,0.817
+Seconds / image (this machine),0.023,0.591,0.044

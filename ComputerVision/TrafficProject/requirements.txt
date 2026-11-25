@@ -1,0 +1,7 @@
+# The project uses the pinned workspace environment (Epoch_Zero/requirements.txt):
+-r ../../requirements.txt
+# Packages the project itself needs (all pinned in the file above):
+#   torch, torchvision (CUDA 12.6 build), ultralytics, transformers, huggingface_hub, opencv-python,
+#   numpy, pandas, matplotlib, scikit-learn, scipy, imagehash, pillow, pyyaml, tabulate,
+#   gradio (app.py), markdown-pdf (report export)
+# In Google Colab only `ultralytics` and `imagehash` are missing; the notebooks install them.

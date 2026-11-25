@@ -1,0 +1,45 @@
+{
+  "uvh26_images": 3200,
+  "pseudo_cameras": 1956,
+  "group_dist": 12,
+  "scene_sim": 0.62,
+  "expected_cameras": 1987,
+  "split_images": {
+    "train": 2241,
+    "val": 480,
+    "test": 300
+  },
+  "split_boxes": {
+    "train": 29654,
+    "val": 5859,
+    "test": 4027
+  },
+  "class_counts": {
+    "train": {
+      "car": 6883,
+      "two_wheeler": 13763,
+      "auto_rickshaw": 4622,
+      "bus": 1076,
+      "truck": 3310
+    },
+    "val": {
+      "car": 1432,
+      "two_wheeler": 2759,
+      "auto_rickshaw": 841,
+      "bus": 191,
+      "truck": 636
+    },
+    "test": {
+      "car": 923,
+      "two_wheeler": 1841,
+      "auto_rickshaw": 637,
+      "bus": 170,
+      "truck": 456
+    }
+  },
+  "label_problems": 0,
+  "leakage_check_pass": true,
+  "small_box_fraction": 0.012822458270106222,
+  "commons_photos": 118,
+  "commons_level_labels": 118
+}
