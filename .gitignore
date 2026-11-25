@@ -1,0 +1,36 @@
+# Python / Jupyter
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Stray Ultralytics runs created at the repo root
+/runs/
+
+# Course assignment datasets (downloaded automatically by the notebooks)
+ComputerVision/data/
+
+# Traffic project: datasets are rebuilt by scripts/download_uvh26.py,
+# convert_to_yolo.py and make_splits.py
+ComputerVision/TrafficProject/data/_raw/
+ComputerVision/TrafficProject/data/_cache/
+ComputerVision/TrafficProject/data/train/
+ComputerVision/TrafficProject/data/val/
+ComputerVision/TrafficProject/data/test/
+*.cache
+
+# Wikimedia Commons photos: re-downloaded by scripts/collect_commons.py;
+# sources, licences and labels stay in the CSV files
+ComputerVision/TrafficProject/data/own_photos/raw/
+ComputerVision/TrafficProject/data/own_photos/images/
+
+# Intermediate model-selection checkpoints and runtime YAML with local paths
+ComputerVision/TrafficProject/weights/model_selection/
+ComputerVision/TrafficProject/runs/
