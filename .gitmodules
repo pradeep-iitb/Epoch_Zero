@@ -1,0 +1,3 @@
+[submodule "NaturalLanguageProcessing/SignalDesk"]
+	path = NaturalLanguageProcessing/SignalDesk
+	url = https://github.com/pradeep-iitb/SignalDesk.git
